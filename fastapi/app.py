@@ -162,8 +162,8 @@ async def get_oilprice(zipcode: str, quantity: int) -> tuple[float, float, str]:
 @app.get("/filling-image/")
 async def filling_image(
     image_url: str = Query("http://thingino:thingino@192.168.42.4/image.jpg", description="URL des Bildes"),
-    region: str = "880,130,910,1070",
-    threshold_min: int = 140,
+    region: str = "1160,40,1200,1050",
+    threshold_min: int = 120,
     threshold_max: int = 255,
     levelLow: int = 10,
     levelMedium: int = 50,
@@ -209,8 +209,8 @@ async def filling_image(
 @app.get("/filling-data/")
 async def filling_data(
     image_url: str = Query("http://thingino:thingino@192.168.42.4/image.jpg", description="URL des Bildes"),
-    region: str = "880,130,910,1070",
-    threshold_min: int = 140,
+    region: str = "1160,40,1200,1050",
+    threshold_min: int = 120,
     threshold_max: int = 255,
     capacity: int = 2400,  
     zipcode: str = "97222"
@@ -259,10 +259,10 @@ class ProcessStep(str, Enum):
 @app.get("/filling-debug/")
 async def debug_image(
     image_url: str = Query("http://thingino:thingino@192.168.42.4/image.jpg", description="URL des Bildes"),    
-    threshold_min: int = 140,
+    threshold_min: int = 120,
     threshold_max: int = 255,
     process_step: ProcessStep = ProcessStep.preprocess,
-    region: str = "880,130,910,1070"  # Default region for simplicity
+    region: str = "1160,40,1200,1050"  # Default region for simplicity
 ):
     # Read the uploaded image
     image_cv = await fetch_and_load_image(image_url)
