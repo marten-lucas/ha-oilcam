@@ -1,0 +1,53 @@
+{
+    "config": {
+      "step": {
+        "user": {
+          "title": "Oilcam Setup",
+          "data": {
+            "host": "[%key:common::config_flow::data::host%]",
+            "port": "[%key:common::config_flow::data::port%]",
+            "url": "Camera URL",
+            "update_cycle": "Update Cycle (seconds)",
+            "zipcode": "ZIP Code",
+            "region": "Region (x1,y1,x2,y2)",
+            "threshold_min": "Threshold Min",
+            "threshold_max": "Threshold Max",
+            "capacity": "Tank Capacity (L)",
+            "levelLow": "Level Low (%)",
+            "levelMedium": "Level Medium (%)",
+            "colorLow": "Color Low (hex)",
+            "colorMedium": "Color Medium (hex)",
+            "colorFull": "Color Full (hex)",
+            "colorBox": "Color Box (hex)"
+          }
+        },
+        "init": {
+          "title": "Oilcam Options",
+          "data": {
+            "host": "[%key:common::config_flow::data::host%]",
+            "port": "[%key:common::config_flow::data::port%]",
+            "url": "Camera URL",
+            "update_cycle": "Update Cycle (seconds)",
+            "zipcode": "ZIP Code",
+            "region": "Region (x1,y1,x2,y2)",
+            "threshold_min": "Threshold Min",
+            "threshold_max": "Threshold Max",
+            "capacity": "Tank Capacity (L)",
+            "levelLow": "Level Low (%)",
+            "levelMedium": "Level Medium (%)",
+            "colorLow": "Color Low (hex)",
+            "colorMedium": "Color Medium (hex)",
+            "colorFull": "Color Full (hex)",
+            "colorBox": "Color Box (hex)"
+          }
+        }
+      },
+      "error": {
+        "cannot_connect": "[%key:common::config_flow::error::cannot_connect%]",
+        "unknown": "[%key:common::config_flow::error::unknown%]"
+      },
+      "abort": {
+        "already_configured": "[%key:common::config_flow::abort::already_configured_device%]"
+      }
+    }
+  }
